@@ -1,0 +1,3 @@
+[submodule "src/lib/make10"]
+	path = src/lib/make10
+	url = https://github.com/Ran350/make10.git
