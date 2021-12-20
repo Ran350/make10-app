@@ -2,9 +2,11 @@
   "name": "make10-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ran350.github.io/make10-app/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "yarn build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
