@@ -1,29 +1,40 @@
+import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
+import { Box } from "@mui/system";
 import { VFC } from "react";
 import { calculate } from "../lib/make10/src";
 
 type Props = {
-  input: string;
+  inputs: string[];
 };
 
-export const Answer: VFC<Props> = ({ input }) => {
-  if (!/\d{2,5}/.test(input)) {
-    // 2 文字以上 5 文字以下の連続数字 でない時
-    return <></>;
-  }
+export const Answer: VFC<Props> = ({ inputs }) => {
+  if (inputs.includes("")) return <NoAnswer />;
 
-  const answers = calculate(input.split(""));
+  const answers = calculate(inputs);
 
   if (answers.length === 0) {
-    return <p>no answer</p>;
+    return <NoAnswer />;
   }
 
   return (
-    <div>
-      <p>found {answers.length} answers</p>
+    <List
+      sx={{
+        position: "relative",
+        overflow: "auto",
+        maxHeight: "28rem",
+        padding: "0 8rem",
+      }}
+      subheader={<li />}
+    >
+      <ListSubheader>found {answers.length} answers</ListSubheader>
 
-      {answers.map((answer) => (
-        <p key={answer}>{answer}</p>
+      {answers.map((answer, i) => (
+        <ListItem key={i}>
+          <ListItemText primary={answer} />
+        </ListItem>
       ))}
-    </div>
+    </List>
   );
 };
+
+const NoAnswer: VFC = () => <Box sx={{ margin: "2rem", textAlign: "center" }}>no answer</Box>;
