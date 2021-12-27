@@ -5,9 +5,10 @@ import { ChangeEvent, Dispatch, SetStateAction, VFC } from "react";
 type Props = {
   inputs: string[];
   setInputs: Dispatch<SetStateAction<string[]>>;
+  isXS?: boolean;
 };
 
-export const Input: VFC<Props> = ({ inputs, setInputs }) => {
+export const Input: VFC<Props> = ({ inputs, setInputs, isXS = true }) => {
   const handleChange = (digit: number, e: ChangeEvent<HTMLInputElement>) => {
     const val = e.currentTarget.value;
     if (val.length > 1) return;
@@ -17,7 +18,13 @@ export const Input: VFC<Props> = ({ inputs, setInputs }) => {
   };
 
   return (
-    <Box width="28rem" sx={{ display: "flex", justifyContent: "space-between", gap: "2rem" }}>
+    <Box
+      sx={
+        isXS
+          ? { width: "17rem", display: "flex", justifyContent: "space-between", gap: "0.2rem" }
+          : { width: "28rem", display: "flex", justifyContent: "space-between", gap: "2rem" }
+      }
+    >
       {Array.from({ length: inputs.length }).map((_, i) => (
         <TextField
           key={i}

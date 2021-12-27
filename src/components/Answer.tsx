@@ -5,9 +5,10 @@ import { calculate } from "../lib/make10/src";
 
 type Props = {
   inputs: string[];
+  isXS?: boolean;
 };
 
-export const Answer: VFC<Props> = ({ inputs }) => {
+export const Answer: VFC<Props> = ({ inputs, isXS = true }) => {
   if (inputs.includes("")) {
     return <NoAnswer />;
   }
@@ -20,19 +21,26 @@ export const Answer: VFC<Props> = ({ inputs }) => {
 
   return (
     <List
-      sx={{
-        padding: "0 8rem",
-        maxHeight: "28rem",
-        position: "relative",
-        overflow: "auto",
-      }}
+      sx={
+        isXS
+          ? {
+              textAlign: "center",
+              maxHeight: "22rem",
+              overflow: "auto",
+            }
+          : {
+              px: "8rem",
+              maxHeight: "28rem",
+              overflow: "auto",
+            }
+      }
       subheader={<li />}
     >
       <ListSubheader>found {answers.length} answer(s)</ListSubheader>
 
       {answers.map((answer, i) => (
         <ListItem key={i}>
-          <ListItemText primary={answer} />
+          <ListItemText primary={answer} sx={isXS ? { px: "3rem" } : {}} />
         </ListItem>
       ))}
     </List>
