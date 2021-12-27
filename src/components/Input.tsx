@@ -9,9 +9,8 @@ type Props = {
 export const Input: VFC<Props> = ({ inputs, setInputs }) => {
   const handleChange = (digit: number, e: ChangeEvent<HTMLInputElement>) => {
     const val = e.currentTarget.value;
-    if (val.length > 1) {
-      return;
-    }
+    if (val.length > 1) return;
+
     const newInputs = inputs.map((num, i) => (i === digit ? val : num));
     setInputs(newInputs);
   };
@@ -21,12 +20,12 @@ export const Input: VFC<Props> = ({ inputs, setInputs }) => {
       {Array.from({ length: inputs.length }).map((_, i) => (
         <TextField
           key={i}
-          inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
           value={inputs[i]}
           onChange={handleChange.bind(this, i)}
           type="number"
           autoFocus={i === 0}
-          sx={{ width: `calc(90%/${inputs.length})`, height: "4rem", fontSize: "2rem" }}
+          inputProps={{ style: { fontSize: "1.5rem" } }}
+          sx={{ width: `calc(90%/${inputs.length})` }}
         />
       ))}
     </Grid>

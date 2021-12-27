@@ -10,7 +10,7 @@ const App: VFC = () => {
   return (
     <Container sx={{ width: "42rem", fontSize: "1rem", margin: "2rem auto" }}>
       <Typography variant="h4" align="center" sx={{ fontSize: "2rem", color: "#333" }}>
-        Make10 Puzzle
+        Make 10 Puzzle
       </Typography>
 
       <Grid container justifyContent="space-between" alignItems="center" sx={{ margin: "2rem auto" }}>
