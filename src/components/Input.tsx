@@ -24,8 +24,11 @@ export const Input: VFC<Props> = ({ inputs, setInputs }) => {
           onChange={handleChange.bind(this, i)}
           type="number"
           autoFocus={i === 0}
-          inputProps={{ style: { fontSize: "1.5rem" } }}
-          sx={{ width: `calc(90%/${inputs.length})` }}
+          sx={{ width: `calc(70%/${inputs.length})`, display: "block" }}
+          inputProps={{
+            style: { fontSize: "1.5rem", textAlign: "center", height: "2.83rem" },
+            className: "no-spin",
+          }}
         />
       ))}
     </Grid>
