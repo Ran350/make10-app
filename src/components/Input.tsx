@@ -1,4 +1,5 @@
-import { Grid, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
+import { Box } from "@mui/system";
 import { ChangeEvent, Dispatch, SetStateAction, VFC } from "react";
 
 type Props = {
@@ -9,26 +10,28 @@ type Props = {
 export const Input: VFC<Props> = ({ inputs, setInputs }) => {
   const handleChange = (digit: number, e: ChangeEvent<HTMLInputElement>) => {
     const val = e.currentTarget.value;
-    if (val.length > 1) {
-      return;
-    }
+    if (val.length > 1) return;
+
     const newInputs = inputs.map((num, i) => (i === digit ? val : num));
     setInputs(newInputs);
   };
 
   return (
-    <Grid container justifyContent="space-between" alignItems="center" width="28rem">
+    <Box width="28rem" sx={{ display: "flex", justifyContent: "space-between", gap: "2rem" }}>
       {Array.from({ length: inputs.length }).map((_, i) => (
         <TextField
           key={i}
-          inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+          type="number"
           value={inputs[i]}
           onChange={handleChange.bind(this, i)}
-          type="number"
-          autoFocus={i === 0}
-          sx={{ width: `calc(90%/${inputs.length})`, height: "4rem", fontSize: "2rem" }}
+          autoFocus={true}
+          sx={{ display: "block" }}
+          inputProps={{
+            style: { fontSize: "1.5rem", textAlign: "center" },
+            className: "no-spin",
+          }}
         />
       ))}
-    </Grid>
+    </Box>
   );
 };

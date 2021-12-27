@@ -15,8 +15,8 @@ export const DigitDecrement: VFC<Props> = ({ inputs, setInputs }) => {
   };
 
   return (
-    <IconButton onClick={handleClick} color="error" size="large">
-      <RemoveCircleIcon fontSize="inherit" />
+    <IconButton onClick={handleClick} size="large">
+      <RemoveCircleIcon fontSize="inherit" color={inputs.length > 2 ? "error" : "disabled"} />
     </IconButton>
   );
 };
@@ -28,8 +28,8 @@ export const DigitIncrement: VFC<Props> = ({ inputs, setInputs }) => {
   };
 
   return (
-    <IconButton onClick={handleClick} color="primary" size="large">
-      <AddCircleIcon fontSize="inherit" />
+    <IconButton onClick={handleClick} size="large">
+      <AddCircleIcon fontSize="inherit" color={inputs.length < 5 ? "primary" : "disabled"} />
     </IconButton>
   );
 };

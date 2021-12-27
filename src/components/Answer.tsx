@@ -8,7 +8,9 @@ type Props = {
 };
 
 export const Answer: VFC<Props> = ({ inputs }) => {
-  if (inputs.includes("")) return <NoAnswer />;
+  if (inputs.includes("")) {
+    return <NoAnswer />;
+  }
 
   const answers = calculate(inputs);
 
@@ -19,14 +21,14 @@ export const Answer: VFC<Props> = ({ inputs }) => {
   return (
     <List
       sx={{
+        padding: "0 8rem",
+        maxHeight: "28rem",
         position: "relative",
         overflow: "auto",
-        maxHeight: "28rem",
-        padding: "0 8rem",
       }}
       subheader={<li />}
     >
-      <ListSubheader>found {answers.length} answers</ListSubheader>
+      <ListSubheader>found {answers.length} answer(s)</ListSubheader>
 
       {answers.map((answer, i) => (
         <ListItem key={i}>
