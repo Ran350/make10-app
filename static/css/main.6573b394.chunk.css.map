@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/global.css"],"names":[],"mappings":"AAAA,wEAEE,QAAS,CACT,uBAAwB,CACxB,yBACF","file":"main.6573b394.chunk.css","sourcesContent":[".no-spin::-webkit-inner-spin-button,\n.no-spin::-webkit-outer-spin-button {\n  margin: 0;\n  -webkit-appearance: none;\n  -moz-appearance: textfield;\n}\n"]}

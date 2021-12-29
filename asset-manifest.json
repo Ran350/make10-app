@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/make10-app/static/js/main.afa6ba3e.chunk.js",
-    "main.js.map": "/make10-app/static/js/main.afa6ba3e.chunk.js.map",
+    "main.css": "/make10-app/static/css/main.6573b394.chunk.css",
+    "main.js": "/make10-app/static/js/main.aced4840.chunk.js",
+    "main.js.map": "/make10-app/static/js/main.aced4840.chunk.js.map",
     "runtime-main.js": "/make10-app/static/js/runtime-main.37eb8c0a.js",
     "runtime-main.js.map": "/make10-app/static/js/runtime-main.37eb8c0a.js.map",
-    "static/js/2.dd3e3c44.chunk.js": "/make10-app/static/js/2.dd3e3c44.chunk.js",
-    "static/js/2.dd3e3c44.chunk.js.map": "/make10-app/static/js/2.dd3e3c44.chunk.js.map",
+    "static/js/2.09fcec54.chunk.js": "/make10-app/static/js/2.09fcec54.chunk.js",
+    "static/js/2.09fcec54.chunk.js.map": "/make10-app/static/js/2.09fcec54.chunk.js.map",
     "index.html": "/make10-app/index.html",
-    "static/js/2.dd3e3c44.chunk.js.LICENSE.txt": "/make10-app/static/js/2.dd3e3c44.chunk.js.LICENSE.txt"
+    "static/css/main.6573b394.chunk.css.map": "/make10-app/static/css/main.6573b394.chunk.css.map",
+    "static/js/2.09fcec54.chunk.js.LICENSE.txt": "/make10-app/static/js/2.09fcec54.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.37eb8c0a.js",
-    "static/js/2.dd3e3c44.chunk.js",
-    "static/js/main.afa6ba3e.chunk.js"
+    "static/js/2.09fcec54.chunk.js",
+    "static/css/main.6573b394.chunk.css",
+    "static/js/main.aced4840.chunk.js"
   ]
 }
