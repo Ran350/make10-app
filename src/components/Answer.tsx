@@ -39,4 +39,6 @@ export const Answer: VFC<Props> = ({ inputs, isXS = true }) => {
   );
 };
 
-const NoAnswer: VFC = () => <Box sx={{ margin: "2rem", textAlign: "center" }}>no answer</Box>;
+const NoAnswer: VFC = () => (
+  <Box sx={{ margin: "2rem", textAlign: "center", fontFamily: "'Gill Sans', sans-serif" }}>no answer</Box>
+);
