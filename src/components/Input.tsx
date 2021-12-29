@@ -19,11 +19,12 @@ export const Input: VFC<Props> = ({ inputs, setInputs, isXS = true }) => {
 
   return (
     <Box
-      sx={
-        isXS
-          ? { width: "17rem", display: "flex", justifyContent: "space-between", gap: "0.2rem" }
-          : { width: "28rem", display: "flex", justifyContent: "space-between", gap: "2rem" }
-      }
+      sx={{
+        width: isXS ? "17rem" : "28rem",
+        display: "flex",
+        justifyContent: "space-between",
+        gap: isXS ? "0.2rem" : "2rem",
+      }}
     >
       {Array.from({ length: inputs.length }).map((_, i) => (
         <TextField

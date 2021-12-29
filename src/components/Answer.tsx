@@ -21,26 +21,18 @@ export const Answer: VFC<Props> = ({ inputs, isXS = true }) => {
 
   return (
     <List
-      sx={
-        isXS
-          ? {
-              textAlign: "center",
-              maxHeight: "22rem",
-              overflow: "auto",
-            }
-          : {
-              px: "8rem",
-              maxHeight: "28rem",
-              overflow: "auto",
-            }
-      }
+      sx={{
+        textAlign: "center",
+        maxHeight: isXS ? "22rem" : "28rem",
+        overflow: "auto",
+      }}
       subheader={<li />}
     >
       <ListSubheader>found {answers.length} answer(s)</ListSubheader>
 
       {answers.map((answer, i) => (
         <ListItem key={i}>
-          <ListItemText primary={answer} sx={isXS ? { px: "3rem" } : {}} />
+          <ListItemText primary={answer} sx={{ px: isXS ? "3rem" : "8rem" }} />
         </ListItem>
       ))}
     </List>

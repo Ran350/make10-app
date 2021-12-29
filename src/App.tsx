@@ -10,8 +10,8 @@ const App: VFC = () => {
   const isXS = useMediaQuery("(max-width:600px)");
 
   return (
-    <Container sx={isXS ? { m: "1rem auto", p: 0, fontSize: "1rem" } : { m: "2rem auto", p: 0, fontSize: "1rem" }}>
-      <Typography align="center" sx={{ fontSize: "2rem", color: "#333" }}>
+    <Container sx={{ m: isXS ? "2rem auto" : "1rem auto", p: 0, fontSize: "1rem" }}>
+      <Typography align="center" color="#333" sx={{ fontSize: isXS ? "1.5rem" : "2rem" }}>
         Make 10 Puzzle
       </Typography>
 
@@ -26,7 +26,7 @@ const App: VFC = () => {
         <DigitIncrement inputs={inputs} setInputs={setInputs} />
       </Grid>
 
-      <Card sx={isXS ? { boxShadow: 3, width: "17rem", m: "0 auto" } : { boxShadow: 3, width: "28rem", m: "0 auto" }}>
+      <Card sx={{ m: "0 auto", boxShadow: 3, width: isXS ? "17rem" : "28rem" }}>
         <Answer inputs={inputs} isXS={isXS} />
       </Card>
     </Container>
