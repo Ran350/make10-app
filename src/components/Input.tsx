@@ -5,28 +5,29 @@ import { ChangeEvent, Dispatch, SetStateAction, VFC } from "react";
 type Props = {
   inputs: string[];
   setInputs: Dispatch<SetStateAction<string[]>>;
-  isXS?: boolean;
+  isXS: boolean;
 };
 
-export const Input: VFC<Props> = ({ inputs, setInputs, isXS = true }) => {
+export const Input: VFC<Props> = ({ inputs, setInputs, isXS }) => {
   const handleChange = (digit: number, e: ChangeEvent<HTMLInputElement>) => {
     const val = e.currentTarget.value;
     if (val.length > 1) return;
 
-    const newInputs = inputs.map((num, i) => (i === digit ? val : num));
+    const newInputs = [...inputs];
+    newInputs[digit] = val;
     setInputs(newInputs);
   };
 
   return (
     <Box
       sx={{
-        width: isXS ? "17rem" : "28rem",
+        width: isXS ? "16rem" : "28rem",
         display: "flex",
         justifyContent: "space-between",
         gap: isXS ? "0.2rem" : "2rem",
       }}
     >
-      {Array.from({ length: inputs.length }).map((_, i) => (
+      {inputs.map((_, i) => (
         <TextField
           key={i}
           type="number"

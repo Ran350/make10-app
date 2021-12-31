@@ -26,7 +26,7 @@ const App: VFC = () => {
         <DigitIncrement inputs={inputs} setInputs={setInputs} />
       </Grid>
 
-      <Card sx={{ m: "0 auto", boxShadow: 3, width: isXS ? "17rem" : "28rem" }}>
+      <Card sx={{ m: "0 auto", boxShadow: 3, width: isXS ? "16rem" : "28rem" }}>
         <Answer inputs={inputs} isXS={isXS} />
       </Card>
     </Container>
