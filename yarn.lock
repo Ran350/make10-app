@@ -1629,6 +1629,11 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
   integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
 
+"@ran350/make10@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@ran350/make10/1.0.1/3cc50cc51f5bee4be5f08e338c144d55fa842c1854ca1faa1fe38a1373e88bbb#38467b2ad25781a71dfac680d7a17cdf0675a40a"
+  integrity sha512-0mtkxnb6PgCfyKZgQMwiLUw0MLgUPRNI/Fzhd/HITGzBkwbg9PZXruI4F8Ab4XXOme5XvjzVHx8tVeGpD2UqwA==
+
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-7.1.3.tgz#80de384edfbd7bfc9101164910f86078151a3eca"

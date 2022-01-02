@@ -1,17 +1,21 @@
-# Make10 Puzzle App
-- Make10 Puzzle の解答を全列挙する Web アプリ
-- [Ran350/make10](https://github.com/Ran350/make10) を git submodule として使用
+<div align="center">
 
-## 準備
+# [Make 10 Puzzle App](https://ran350.github.io/make10-app/)
+
+</div>
+
+- Web app that lists all the answers of `Make 10 Puzzle`
+- calculate by [@ran350/make10](https://github.com/Ran350/make10)
+
+## Preparation
 ```sh
 git clone <this repo>
-cd calculator-app
+cd <this repo>
 yarn install
-cd src/lib && git clone https://github.com/Ran350/make10.git && git install && cd ../../
 ```
 
-## コマンド
-[package.json](https://github.com/Ran350/make10-app/blob/main/package.json) の scripts を参照してください． 
+## Command
+See [package.json](https://github.com/Ran350/make10-app/blob/main/package.json) > `scripts`. 
 - start : `yarn start`
 - build : `yarn build`
 - deploy :  `yarn deploy`

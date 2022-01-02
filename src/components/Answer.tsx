@@ -1,7 +1,7 @@
 import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
 import { Box } from "@mui/system";
+import { make10 } from "@ran350/make10";
 import { VFC } from "react";
-import { calculate } from "../lib/make10/src";
 
 type Props = {
   inputs: string[];
@@ -13,7 +13,7 @@ export const Answer: VFC<Props> = ({ inputs, isXS = true }) => {
     return <NoAnswer />;
   }
 
-  const answers = calculate(inputs);
+  const answers = make10(inputs);
 
   if (answers.length === 0) {
     return <NoAnswer />;
